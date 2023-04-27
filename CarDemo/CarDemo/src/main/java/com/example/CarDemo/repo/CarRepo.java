@@ -1,0 +1,13 @@
+package com.example.CarDemo.repo;
+
+import com.example.CarDemo.entity.CarEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface CarRepo extends JpaRepository<CarEntity,Integer> {
+
+    List<CarEntity> findBydate(String date);
+}
